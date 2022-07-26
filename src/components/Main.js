@@ -1,19 +1,31 @@
 import React from "react";
-// import HornedBeast from "./HornedBeast";
+import HornedBeast from "./HornedBeast";
 import AnimalData from "../data.json";
-import Cards from "./Cards";
+import SelectedBeast from "./SelectedBeast";
 
 class Main extends React.Component {
+
+    // constructor(props) {
+    //     super(props);
+    //     this.state = {
+    //         show: false
+    //     }
+    // }
+
+    // showModal = (value) => {
+    //     this.state({
+    //         show: true
+    //     })
+    // }
+
     render () {
         return (
             AnimalData.map( animal => {
                 return (
                     <div className="animalsArr" key={animal._id}>
 
-                        {/* old method before cards */}
-                        {/* <HornedBeast title={animal.title} imgLink={animal.image_url} imgAlt= {animal.title} imgtitle= {animal.imgtitle} description={animal.description} horns= {animal.horns}/> */}
-
-                            <Cards className="indCard" title={animal.title} imgLink={animal.image_url} imgAlt= {animal.title} imgtitle= {animal.imgtitle} description={animal.description} horns= {animal.horns}/>
+                        <HornedBeast className="indCard" title={animal.title} imgLink={animal.image_url} imgAlt= {animal.title} imgtitle= {animal.imgtitle} description={animal.description} horns= {animal.horns}/>
+                        <SelectedBeast />
                     </div>
                 )
             })

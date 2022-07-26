@@ -28,3 +28,17 @@ Start time: 1:30 PM
 Finish time: 7 PM
 
 Actual time needed to complete: 4 hours
+
+<hr>
+
+### Lab Class 03:
+
+Number and name of feature: Passing functions in Props
+
+Estimate of time needed to complete: 3 Hours
+
+Start time: 1:30 PM
+
+Finish time: 7 PM
+
+Actual time needed to complete: 4 hours
