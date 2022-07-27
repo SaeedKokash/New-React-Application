@@ -33,12 +33,12 @@ Actual time needed to complete: 4 hours
 
 ### Lab Class 03:
 
-Number and name of feature: Passing functions in Props
+Number and name of feature: Passing functions in Props / creating Modal
 
 Estimate of time needed to complete: 3 Hours
 
 Start time: 1:30 PM
 
-Finish time: 7 PM
+Finish time: next day
 
-Actual time needed to complete: 4 hours
+Actual time needed to complete: 2 hours after watching the code review
