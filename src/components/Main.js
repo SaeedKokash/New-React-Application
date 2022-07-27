@@ -7,7 +7,7 @@ class Main extends React.Component {
     render () {
         return (
             this.props.animalData.map( animal => {
-                return (
+                return ( 
                     <div className="animalsArr" key={animal._id}>
 
                         <HornedBeast className="indCard" 
@@ -22,6 +22,7 @@ class Main extends React.Component {
                         />
 
                     </div>
+                    
                 )
             })
            
