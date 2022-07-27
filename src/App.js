@@ -2,38 +2,57 @@ import './App.css';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Main from './components/Main';
-import NavBar from './components/nav';
+import data from "./components/data.json";
+
 import 'bootstrap/dist/css/bootstrap.min.css';
+import React, { Component } from 'react';
+
 import SelectedBeast from './components/SelectedBeast';
 
-constructor(props) {
-  super(props);
-  this.state = {
-      favClickCounter: 0,
+
+class App extends React.Component {
+
+  constructor(props) {
+    super(props);
+     this.state = {
+      animalData : data,
+      selectedBeast: {},
       showModal: false
+     }
   }
-}
+
+  displayModal = (beast) => {
+    this.setState({
+      showModal: true,
+      selectedBeast: beast
+    })
+  }
+
+  handleClose = () => {
+    this.setState({
+      showModal: false
+    })
+  }
 
 
+  render() {
+    return (
+      <div className="App">
+        <header className="App-header">
+          <Header className="navHeader" />
+        </header>
 
-function App() {
-  
-  return (
-    <div className="App">
-      <header className="App-header">
-        <NavBar className="navBar" />
-        <Header className="navHeader"/>
-      </header>
+        <main className="App-main">
+          <Main animalData={this.state.animalData} displayModal={this.displayModal}/>
+          <SelectedBeast show={this.state.showModal} handleClose={this.handleClose} selectedBeast={this.state.selectedBeast}/>
+        </main>
 
-      <main className="App-main">
-        <Main />
-      </main>
-
-      <footer className="App-footer">
-        <Footer />
-      </footer>
-    </div>
-  );
+        <footer className="App-footer">
+          <Footer />
+        </footer>
+      </div>
+    );
+  }
 }
 
 export default App;

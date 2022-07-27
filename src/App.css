@@ -32,5 +32,10 @@
 }
 
 .cardImage {
-  height: 300px;
+  height: 250px;
+}
+
+
+.modalImg {
+  width: 100%;
 }
