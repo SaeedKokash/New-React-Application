@@ -21,9 +21,11 @@ class App extends React.Component {
   }
 
   displayModal = (beast) => {
+
+    let result = this.state.animalData.find(item => item.title === beast.title)
     this.setState({
       showModal: true,
-      selectedBeast: beast
+      selectedBeast: result
     })
   }
 
@@ -33,9 +35,14 @@ class App extends React.Component {
     })
   }
 
-  // hornFilter = () => {
-  //   this.setState()
-  // }
+  hornFilter = (e) => {
+      const hornNumber = parseInt(e.target.value);
+      let filteredData = data;
+      if(hornNumber) {
+        filteredData = data.filter(item => item.horns === hornNumber);
+      }
+    this.setState({animalData: filteredData})
+  }
 
 
   render() {
@@ -45,7 +52,7 @@ class App extends React.Component {
           <Header className="navHeader" />
         </header>
 
-        <ModalForm/> 
+        <ModalForm hornFilter={this.hornFilter}/> 
 
         <main className="App-main">
           
