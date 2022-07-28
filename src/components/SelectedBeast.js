@@ -4,13 +4,6 @@ import Modal from 'react-bootstrap/Modal';
 
 class SelectedBeast extends React.Component {
 
-    constructor(props) {
-            super(props);
-            this.state = {
-                
-            }
-            console.log(this.props);
-        }
 
     render() {
         return (

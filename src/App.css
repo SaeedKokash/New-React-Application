@@ -39,3 +39,20 @@
 .modalImg {
   width: 100%;
 }
+
+.App-main {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  gap: 2rem;
+  padding: 1%;
+
+}
+
+.filterForm {
+  width: 100%;
+  margin-top: 2%;
+  
+}
